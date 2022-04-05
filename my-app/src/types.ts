@@ -63,3 +63,9 @@ export type getProductsData = {
     type: String, 
     productInfo: Product 
 }
+
+export type Store = {
+    state: Array<Product>
+    getProducts: Function
+}
+ 
