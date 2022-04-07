@@ -8,7 +8,6 @@ const rotation = keyframes`
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
@@ -24,7 +23,6 @@ const Loader = styled.span`
     justify-self:center;
     box-sizing: border-box;
     animation: ${rotation} 1s linear infinite;
-
     @media (max-width: 545px) {
         width: 20vw;
         height: 20vw;  
@@ -54,14 +52,12 @@ const ErrorTitle = styled.h2`
     color: #ffffff;
     font-size: 7rem;
     margin-top: 6vh;
-
     @media (max-width: 545px) {
         text-align: center;  
     }
     @media (max-width: 415px) {
         text-align: center;
         font-size: 5rem;
-
     }
 `
 const ErrorDescription = styled.p`
@@ -70,11 +66,9 @@ const ErrorDescription = styled.p`
     margin-top: 2vh;
     font-size: 1.5rem;
     text-align: center;
-
     @media (max-width: 415px) {
         text-align: center;
         font-size: 5rem;
-
     }
 `
 const ProductsContainer = styled.div`
@@ -84,7 +78,6 @@ const ProductsContainer = styled.div`
     grid-template-columns: repeat(4, 20vw);
     grid-gap: 4vw;
     margin:0 2vw 0 2vw;
-
     @media (max-width: 763px) {
         display: grid;
         padding:2vw;
@@ -95,9 +88,6 @@ const ProductsContainer = styled.div`
         display: flex;
         flex-direction: column;
     }
-`
-const Hidden = styled.div`
-    display: none;
 `
 
 
@@ -125,7 +115,7 @@ const Error: FC = () => {
 
 const Products: FC = () => {
     const context = useContext(Context)
-    const mainPgeProduct = context.state.products.filter(it => it.on_main_page === true)
+    const filteredProducts = context.state.products.filter(it => it.quantity_available > 0)
     const { data, loading, error } = useRequest(getProductsUrl)
 
     useEffect(() => {
@@ -149,15 +139,12 @@ const Products: FC = () => {
             </Container>
         )
     }
+    
     if (context.state.filtered) {
         return (
             <ProductsContainer>
-                {context.state.products.map((product) => {
-                    if (product.quantity_available > 0) {
-                        return <ProductCart productInfo={product} key={`${product.product_id}`} />
-                    }
-                    return <Hidden>hidden</Hidden>
-
+                {filteredProducts.map((product) => {
+                    return <ProductCart productInfo={product} key={`${product.product_id}`} />
                 })}
             </ProductsContainer>
         )
