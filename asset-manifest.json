@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/testArtisant/static/css/main.1b9d85ec.css",
+    "main.js": "/testArtisant/static/js/main.a17fd832.js",
+    "static/js/787.28cb0dcd.chunk.js": "/testArtisant/static/js/787.28cb0dcd.chunk.js",
+    "static/media/OpenSans-Medium.woff": "/testArtisant/static/media/OpenSans-Medium.e124dc382a48d6934e8b.woff",
+    "static/media/OpenSans-Regular.woff": "/testArtisant/static/media/OpenSans-Regular.228f4d40a73ac1c2fc68.woff",
+    "static/media/OpenSans-Bold.woff": "/testArtisant/static/media/OpenSans-Bold.faba3f504f533af53a2f.woff",
+    "index.html": "/testArtisant/index.html",
+    "main.1b9d85ec.css.map": "/testArtisant/static/css/main.1b9d85ec.css.map",
+    "main.a17fd832.js.map": "/testArtisant/static/js/main.a17fd832.js.map",
+    "787.28cb0dcd.chunk.js.map": "/testArtisant/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b9d85ec.css",
+    "static/js/main.a17fd832.js"
+  ]
+}
