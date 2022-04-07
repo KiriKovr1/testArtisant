@@ -1,14 +1,9 @@
 import { createGlobalStyle } from "styled-components"
 
-export default createGlobalStyle`
+/* export const GlobalStyle = createGlobalStyle`
     *{
-        margin: 0;
-        padding: 0;
-        outline:0;
-        box-sizing:border-box;
-        font-family: 'Open Sans', sans-serif; 
+        margin: 10%;
+        padding: 0%;
+        overflow-x: hidden;
     }
-    #root{
-        margin:0 auto;
-    }
-`
+`*/

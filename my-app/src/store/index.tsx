@@ -1,11 +1,6 @@
-import React from "react";
-import { User } from './reducers'
+import {createContext} from "react";
+import { Store } from "../types";
 
-export interface Store {
-    state: User,
-    updateUsers: Function
-}
-
-const Context = React.createContext({} as Store)
+const Context = createContext({} as Store)
 
 export default Context

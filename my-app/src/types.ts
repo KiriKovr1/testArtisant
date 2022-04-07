@@ -59,13 +59,16 @@ export type Product = {
     quantity_available: Number
 }
 
-export type getProductsData = {
-    type: String, 
-    productInfo: Product 
-}
 
 export type Store = {
-    state: Array<Product>
+    state: {
+        products: Array<Product>
+        filtered: boolean
+    },
     getProducts: Function
+    updateFilter: () => void
 }
+
+
+
  

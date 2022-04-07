@@ -1,70 +1,40 @@
-export const ADDUSER: String = 'ADDUSER'
+import { Product } from "../types"
 
+type State = {
+    products: Array<Product>
+    filtered: boolean
+}
 
-export interface User {
-    id: Number,
-    name: String,
-    username: String,
-    email: String,
-    address: {
-        street: String,
-        suite: String,
-        city: String,
-        zipcode: String,
-        geo: {
-            lat: String,
-            lng: String
-        }
-    },
-    phone: String,
-    website: String,
-    company: {
-        name: String,
-        catchPhrase: String,
-        bs: String
-    }
+export const GETPRODUCTS: string = 'GETPRODUCTS'
+export const UPDATEFILTERSATUS: string = 'UPDATEFILTERSATUS'
+export const initialState: State = {
+    products: [],
+    filtered: false
+
 }
 
 
-export const initialState: User = {
-    id: 0,
-    name: '',
-    username: '',
-    email: '',
-    address: {
-        street: '',
-        suite: '',
-        city: '',
-        zipcode: '',
-        geo: {
-            lat: '',
-            lng: ''
-        }
-    },
-    phone: '',
-    website: '',
-    company: {
-        name: '',
-        catchPhrase: '',
-        bs: ''
-    }
-}
-
-export const UpdateUserReducer = (state = initialState, action: { type: String, userinfo: User }) => {
+export const ProductReducer = (state = initialState, action: { type: string, products: Array<Product> | any  }) => {
     switch (action.type) {
-        case ADDUSER:
+        case GETPRODUCTS:
             return {
                 ...state,
-                id: action.userinfo.id,
-                name: action.userinfo.name,
-                username: action.userinfo.username,
-                email: action.userinfo.email
+                products: action.products
+            }
+        case UPDATEFILTERSATUS: 
+            return {
+                ...state,
+                filtered: !state.filtered
             }
         default:
             return state
     }
 }
 
-export const updateUser = (data: User) => {
-    return {type: ADDUSER, userinfo: data}
+export const updateProducts = (data: Array<Product>) => {
+    return { type: GETPRODUCTS, products: data }
+}
+
+export const updateFilterStatus = () => {
+    return { type: UPDATEFILTERSATUS, products: undefined} 
 }

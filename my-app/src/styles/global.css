@@ -1,0 +1,21 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+*::-webkit-scrollbar { 
+    width: 0; 
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: local('OpenSans-Bold'), url(../fonts/OpenSans-Bold.woff) ;
+}
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: local('OpenSans-Medium'), url(../fonts/OpenSans-Medium.woff);
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: local('OpenSans-Regular'), url(../fonts/OpenSans-Regular.woff);
+}
