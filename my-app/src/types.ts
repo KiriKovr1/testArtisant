@@ -65,7 +65,7 @@ export type Store = {
         products: Array<Product>
         filtered: boolean
     },
-    getProducts: Function
+    getProducts: (data: Array<Product>) => void
     updateFilter: () => void
 }
 

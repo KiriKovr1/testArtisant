@@ -5,7 +5,20 @@ import Context from '../../store'
 const FilterContainer = styled.div`
     height: 8vh;
     width: 20vw;
-    display: flex
+    display: flex;
+    
+    @media (max-width: 768px) {
+        width: 40vw;
+        height: 12vw;
+    }
+
+    @media (max-width: 545px) {
+        width: 92vw;
+        height: 20vw;
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+      }
 `
 const Filterbutton = styled.button`
     width:100%;
@@ -23,6 +36,7 @@ const Filterbutton = styled.button`
         color: #ffffff;
         transition-duration: 300ms;
     }
+
 `
 
 const Filter: FC = () => {

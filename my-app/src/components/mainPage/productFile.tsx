@@ -10,10 +10,25 @@ type ProductFileProps = {
 const Video = styled.video`
     position: absolute;
     width: 20vw;
+
+    @media (max-width: 763px) {
+        width: 44vw;
+    }
+    @media (max-width: 545px) {
+        width: 98vw;    
+    }
+
 `
 const Image = styled.img`
     position: absolute;
     width: 20vw;
+    
+    @media (max-width: 763px) {
+        width: 44vw;
+    }
+    @media (max-width: 545px) {
+        width: 98vw;    
+    }
 `
 
 const ProductFile: FC<ProductFileProps> = ({

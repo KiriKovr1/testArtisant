@@ -24,6 +24,11 @@ const Loader = styled.span`
     justify-self:center;
     box-sizing: border-box;
     animation: ${rotation} 1s linear infinite;
+
+    @media (max-width: 545px) {
+        width: 20vw;
+        height: 20vw;  
+    }
 `
 const Container = styled.div`
     margin-top: 5vh;
@@ -49,6 +54,15 @@ const ErrorTitle = styled.h2`
     color: #ffffff;
     font-size: 7rem;
     margin-top: 6vh;
+
+    @media (max-width: 545px) {
+        text-align: center;  
+    }
+    @media (max-width: 415px) {
+        text-align: center;
+        font-size: 5rem;
+
+    }
 `
 const ErrorDescription = styled.p`
     color: #ffffff;
@@ -56,6 +70,12 @@ const ErrorDescription = styled.p`
     margin-top: 2vh;
     font-size: 1.5rem;
     text-align: center;
+
+    @media (max-width: 415px) {
+        text-align: center;
+        font-size: 5rem;
+
+    }
 `
 const ProductsContainer = styled.div`
     padding: 2vw;
@@ -63,7 +83,18 @@ const ProductsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 20vw);
     grid-gap: 4vw;
-    margin-left: 2vw;
+    margin:0 2vw 0 2vw;
+
+    @media (max-width: 763px) {
+        display: grid;
+        padding:2vw;
+        grid-gap: 4vw;
+        grid-template-columns: repeat(2, 44vw);
+    }
+    @media (max-width: 545px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 const Hidden = styled.div`
     display: none;
